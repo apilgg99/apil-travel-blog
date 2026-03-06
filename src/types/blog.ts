@@ -19,5 +19,6 @@ export type Post = {
   publishedAt: string;
   readTime: string;
   featured?: boolean;
+  tags: string[];
   author: Author;
 };

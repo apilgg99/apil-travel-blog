@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { posts } from "../data/posts";
+import TagList from "../components/blog/TagList";
 
 export default function PostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -94,6 +95,11 @@ export default function PostPage() {
               {paragraph}
             </p>
           ))}
+        </div>
+
+        {/* Tags */}
+        <div className="border-t border-slate-100 pt-10 pb-2">
+          <TagList tags={post.tags} />
         </div>
 
         {/* Footer nav */}

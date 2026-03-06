@@ -34,6 +34,7 @@ export const posts: Post[] = [
     publishedAt: "2026-01-14",
     readTime: "5 min read",
     featured: true,
+    tags: ["weekend trip", "itinerary", "walking guide", "temples", "japan"],
     author: apil,
   },
   {
@@ -56,6 +57,7 @@ export const posts: Post[] = [
     publishedAt: "2026-01-28",
     readTime: "6 min read",
     featured: true,
+    tags: ["local food", "street food", "markets", "mexico", "mezcal"],
     author: apil,
   },
   {
@@ -76,6 +78,7 @@ export const posts: Post[] = [
     category: { slug: "adventure", name: "Adventure" },
     publishedAt: "2026-02-10",
     readTime: "7 min read",
+    tags: ["trekking", "himalayas", "multi-day hike", "nepal", "high altitude"],
     author: apil,
   },
   {
@@ -97,6 +100,7 @@ export const posts: Post[] = [
     category: { slug: "culture", name: "Culture" },
     publishedAt: "2026-02-22",
     readTime: "5 min read",
+    tags: ["cultural spots", "local experience", "morocco", "traditions", "wellness"],
     author: apil,
   },
   {
@@ -117,6 +121,7 @@ export const posts: Post[] = [
     category: { slug: "nature", name: "Nature" },
     publishedAt: "2026-03-05",
     readTime: "6 min read",
+    tags: ["nature escape", "photography", "patagonia", "hiking", "chile"],
     author: apil,
   },
 ];

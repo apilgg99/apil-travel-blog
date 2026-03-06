@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Post } from "../../types/blog";
+import TagList from "./TagList";
 
 type Props = {
   post: Post;
@@ -36,9 +37,11 @@ export default function PostCard({ post }: Props) {
           {post.title}
         </h2>
 
-        <p className="mb-5 flex-1 text-sm leading-relaxed text-slate-500 line-clamp-2">
+        <p className="mb-4 flex-1 text-sm leading-relaxed text-slate-500 line-clamp-2">
           {post.excerpt}
         </p>
+
+        <TagList tags={post.tags} limit={3} />
 
         {/* Footer meta */}
         <div className="flex items-center gap-1.5 text-xs text-slate-400">
