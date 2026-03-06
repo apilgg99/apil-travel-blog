@@ -28,11 +28,6 @@ export default function PostPage() {
     day: "numeric",
   });
 
-  const paragraphs = post.content
-    .split("\n\n")
-    .map((p) => p.trim())
-    .filter(Boolean);
-
   return (
     <article>
       {/* Hero image — cinematic ratio, full width */}
@@ -91,7 +86,7 @@ export default function PostPage() {
 
         {/* Article body */}
         <div className="py-12">
-          {paragraphs.map((paragraph, i) => (
+          {post.content.map((paragraph, i) => (
             <p
               key={i}
               className="mb-7 text-[1.0625rem] leading-[1.85] text-slate-700 last:mb-0"

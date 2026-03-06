@@ -13,7 +13,7 @@ export type Post = {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content: string[];
   coverImage: string;
   category: Category;
   publishedAt: string;
