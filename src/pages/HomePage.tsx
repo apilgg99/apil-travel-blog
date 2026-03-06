@@ -1,16 +1,19 @@
+import { categories, posts } from "../data/posts";
+import HeroSection from "../sections/home/HeroSection";
+import FeaturedPostsSection from "../sections/home/FeaturedPostsSection";
+import RecentPostsSection from "../sections/home/RecentPostsSection";
+import CategoriesSection from "../sections/home/CategoriesSection";
+
+const featuredPosts = posts.filter((p) => p.featured);
+const recentPosts = posts.slice(-3).reverse();
+
 export default function HomePage() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-20">
-      <p className="mb-3 text-sm font-medium uppercase tracking-widest text-slate-400">
-        Welcome
-      </p>
-      <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-        Travel Blogs By Apil
-      </h1>
-      <p className="mt-5 max-w-2xl text-lg text-slate-600">
-        Stories, guides, and inspiration from around the world. Explore
-        destinations, discover hidden gems, and plan your next adventure.
-      </p>
-    </section>
+    <>
+      <HeroSection />
+      <FeaturedPostsSection posts={featuredPosts} />
+      <RecentPostsSection posts={recentPosts} />
+      <CategoriesSection categories={categories} />
+    </>
   );
 }
