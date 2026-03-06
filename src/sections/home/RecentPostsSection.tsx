@@ -8,15 +8,19 @@ type Props = {
 
 export default function RecentPostsSection({ posts }: Props) {
   return (
-    <section className="bg-slate-50 py-16">
+    <section className="border-t border-slate-100 py-16">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="mb-8 flex items-end justify-between">
-          <h2 className="text-xl font-bold tracking-tight text-slate-900">
-            Recent posts
-          </h2>
+        {/* Section header */}
+        <div className="mb-10 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+              Recent posts
+            </span>
+            <span className="h-px w-8 bg-slate-200" />
+          </div>
           <Link
             to="/blog"
-            className="text-sm font-medium text-indigo-600 hover:underline"
+            className="text-xs font-semibold uppercase tracking-widest text-indigo-600 transition-colors hover:text-indigo-500"
           >
             View all →
           </Link>
