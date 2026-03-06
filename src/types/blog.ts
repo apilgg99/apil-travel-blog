@@ -1,6 +1,11 @@
 export type Category = {
   slug: string;
-  label: string;
+  name: string;
+};
+
+export type Author = {
+  name: string;
+  avatar?: string;
 };
 
 export type Post = {
@@ -11,6 +16,8 @@ export type Post = {
   content: string;
   coverImage: string;
   category: Category;
-  date: string;
-  readingTime: number;
+  publishedAt: string;
+  readTime: string;
+  featured?: boolean;
+  author: Author;
 };
